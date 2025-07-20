@@ -14,6 +14,7 @@ if __name__ == "__main__":
         #"first_repeated_char": ("abcade",),
         #"first_non_repeating": ("aabbcdde",),
         "most_frequent": ("aabbcdde",),
+        "is_anagram": ("Listen","Silentp"),
     }
 
     try:
