@@ -1,6 +1,6 @@
 class StringFunction:
 
-    def first_repeated_char(s):
+    def first_repeated_char(self,s):
         seen = set()
         repeated = set()
         for char in s:
@@ -11,7 +11,7 @@ class StringFunction:
         print("seen: ", seen, "repeated: ", repeated)
         return None
 
-    def char_frequency_map(word):
+    def char_frequency_map(self,word):
         freq = {}
         for char in word:
             if char in freq:
@@ -20,12 +20,25 @@ class StringFunction:
                 freq[char] = 1
         return freq
 
-    def first_non_repeating(word):
+    def first_non_repeating(self,word):
+        word = word.lower()
         freq = {}
         for char in word:
             freq[char] = freq.get(char, 0) + 1
             print("freq[char]", freq[char])
         for char in word:
             if freq[char] == 1:
+                return char
+        return None
+
+    def most_frequent(self, word):
+        word = word.lower()
+        word_dict = {}
+        for char in word:
+            word_dict[char] = word_dict.get(char, 0) + 1
+        print(word_dict)
+        maxValue = max(word_dict.values(), default=0)
+        for char in word:
+            if word_dict[char] == maxValue:
                 return char
         return None
