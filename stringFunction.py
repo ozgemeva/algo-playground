@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class StringFunction:
 
     def first_repeated_char(self, s):
@@ -55,3 +56,19 @@ class StringFunction:
         print("str2_counter:", str2_counter)
 
         return str1_counter == str2_counter
+
+    def is_balanced(self, s):
+      stack = []
+      pair = {")": "(", "]": "[", "}": "{"}
+
+      for char in s:
+        if char in pair.values():  # "(", "[", "{"
+            stack.append(char)
+        elif char in pair:
+            if not stack or stack[-1] != pair[char]:
+                return False
+            stack.pop()
+
+      return not stack
+
+

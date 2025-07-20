@@ -5,20 +5,21 @@ if __name__ == "__main__":
     func_name = input("Which function do you want to work? ")
 
     input_values = {
-       # "rotate": ([1, 2, 3, 4, 5], 2),
-        #"missing_integer": ([1, 2, 0, -1, 3],),
-        #"find_odd": ([1, 2, 3, 2, 1],),
-        #"binary_gap": (1041,),
-        #"tape_equilibrium": ([3, 1, 2, 4, 3],),
-        #"char_frequency_map": ("banana",),
-        #"first_repeated_char": ("abcade",),
-        #"first_non_repeating": ("aabbcdde",),
+        # "rotate": ([1, 2, 3, 4, 5], 2),
+        # "missing_integer": ([1, 2, 0, -1, 3],),
+        # "find_odd": ([1, 2, 3, 2, 1],),
+        # "binary_gap": (1041,),
+        # "tape_equilibrium": ([3, 1, 2, 4, 3],),
+        # "char_frequency_map": ("banana",),
+        # "first_repeated_char": ("abcade",),
+        # "first_non_repeating": ("aabbcdde",),
         "most_frequent": ("aabbcdde",),
-        "is_anagram": ("Listen","Silentp"),
+        "is_anagram": ("Listen", "Silentp"),
+        "is_balanced": ("((()",),
     }
 
     try:
-    
+
         obj = IntFunction()
         obj1 = StringFunction()
 
