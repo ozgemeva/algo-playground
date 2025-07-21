@@ -33,9 +33,9 @@ class IntFunction:
     def tape_equilibrium(arr):
         total = sum(arr)
         left_sum = 0
-        min_diff = float("inf")  # çok büyükten başla
+        min_diff = float("inf")  # start bigger number
 
-        for i in range(len(arr) - 1):  # son elemanda bölme olmaz
+        for i in range(len(arr) - 1):  
             left_sum += arr[i]
             right_sum = total - left_sum
             diff = abs(left_sum - right_sum)

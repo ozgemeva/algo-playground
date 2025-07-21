@@ -58,17 +58,24 @@ class StringFunction:
         return str1_counter == str2_counter
 
     def is_balanced(self, s):
-      stack = []
-      pair = {")": "(", "]": "[", "}": "{"}
+        stack = []
+        pair = {")": "(", "]": "[", "}": "{"}
 
-      for char in s:
-        if char in pair.values():  # "(", "[", "{"
-            stack.append(char)
-        elif char in pair:
-            if not stack or stack[-1] != pair[char]:
-                return False
-            stack.pop()
+        for char in s:
+            if char in pair.values():  # "(", "[", "{"
+                stack.append(char)
+            elif char in pair:
+                if not stack or stack[-1] != pair[char]:
+                    return False
+                stack.pop()
 
-      return not stack
+        return not stack
 
-
+    def is_palindrome(self, s: str) -> bool:
+        inverseWord = s[::-1]
+        print("Word is: ", s)
+        print("Inverse word is: ", inverseWord)
+        if s == inverseWord:
+            return True
+        else:
+            return False
